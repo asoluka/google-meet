@@ -1,5 +1,5 @@
 import React from "react";
 
 export const ToolBar = () => {
-  return <div>ToolBar</div>;
+  return <div className="toolbar">Toolbar</div>;
 };
