@@ -35,6 +35,9 @@ body {
 
 .toolbar {
   height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .user-grid,
@@ -63,4 +66,35 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+.display-icons {
+  display: flex;
+}
+
+.meeting-actions {
+  display: flex;
+}
+
+div.action-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #3c4043;
+}
+
+div.action-icon:not(:last-child) {
+  margin-right: 1rem;
+}
+
+div.action-icon:last-child {
+  width: 65px;
+  border-radius: 30px;
+}
+
+.meeting-actions {
+  height: auto;
 }
