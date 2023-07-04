@@ -1,10 +1,12 @@
 import React from "react";
 import { Icon } from "../../atoms";
 
-export const ToolBar = () => {
+export const ToolBar = ({ time, meetingTitle }) => {
   return (
     <div className="toolbar">
-      <div>08:45PM | DYEN Extra classes</div>
+      <div>
+        {time} | {meetingTitle}
+      </div>
       <div className="meeting-actions">
         <div className="action-icon">
           <Icon name="audio-on" fill="white" />

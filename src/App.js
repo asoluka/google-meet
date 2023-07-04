@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <UserGrid users={users} />
-      <ToolBar />
+      <ToolBar time="08:45 PM" meetingTitle="DYEN Extra classes" />
     </div>
   );
 }
