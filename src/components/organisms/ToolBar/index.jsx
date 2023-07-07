@@ -2,6 +2,10 @@ import React from "react";
 import { Icon } from "../../atoms";
 
 export const ToolBar = ({ setOpenActionPane, time, meetingTitle }) => {
+  function handleActionPaneState() {
+    setOpenActionPane((prev) => !prev);
+  }
+
   return (
     <div className="toolbar">
       <div>
@@ -36,20 +40,24 @@ export const ToolBar = ({ setOpenActionPane, time, meetingTitle }) => {
 
       <div className="display-icons">
         <div className="display-icon">
+          <Icon onClick={handleActionPaneState} name="info" fill="white" />
+        </div>
+        <div className="display-icon">
           <Icon
-            onClick={() => setOpenActionPane((prev) => !prev)}
-            name="info"
+            onClick={handleActionPaneState}
+            name="user-group"
             fill="white"
           />
         </div>
         <div className="display-icon">
-          <Icon name="user-group" fill="white" />
+          <Icon onClick={handleActionPaneState} name="chat" fill="white" />
         </div>
         <div className="display-icon">
-          <Icon name="chat" fill="white" />
-        </div>
-        <div className="display-icon">
-          <Icon name="activity-group" fill="white" />
+          <Icon
+            onClick={handleActionPaneState}
+            name="activity-group"
+            fill="white"
+          />
         </div>
       </div>
     </div>
