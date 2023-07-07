@@ -1,22 +1,7 @@
-import { ToolBar } from "./components/organisms/ToolBar";
-import { UserGrid } from "./components/organisms/UserGrid";
-
-const users = [
-  { id: 1, name: "Austin" },
-  { id: 2, name: "Taddy" },
-  { id: 3, name: "David" },
-  { id: 4, name: "Peculiar" },
-  { id: 5, name: "Jeff" },
-  { id: 6, name: "Tsola" },
-];
+import { HomePage } from "./components/pages/HomePage";
 
 function App() {
-  return (
-    <div>
-      <UserGrid users={users} />
-      <ToolBar time="08:45 PM" meetingTitle="DYEN Extra classes" />
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;

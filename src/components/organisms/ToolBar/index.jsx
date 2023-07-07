@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "../../atoms";
 
-export const ToolBar = ({ time, meetingTitle }) => {
+export const ToolBar = ({ setOpenActionPane, time, meetingTitle }) => {
   return (
     <div className="toolbar">
       <div>
@@ -33,7 +33,25 @@ export const ToolBar = ({ time, meetingTitle }) => {
           <Icon name="phone" fill="white" />
         </div>
       </div>
-      <div className="display-icons">Display</div>
+
+      <div className="display-icons">
+        <div className="display-icon">
+          <Icon
+            onClick={() => setOpenActionPane((prev) => !prev)}
+            name="info"
+            fill="white"
+          />
+        </div>
+        <div className="display-icon">
+          <Icon name="user-group" fill="white" />
+        </div>
+        <div className="display-icon">
+          <Icon name="chat" fill="white" />
+        </div>
+        <div className="display-icon">
+          <Icon name="activity-group" fill="white" />
+        </div>
+      </div>
     </div>
   );
 };
