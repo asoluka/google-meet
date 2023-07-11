@@ -29,8 +29,3 @@ export const WrappedIcon = ({
     </div>
   );
 };
-
-// if active and activeStateColor is red
-//      maintain white color
-// else
-// use dark color

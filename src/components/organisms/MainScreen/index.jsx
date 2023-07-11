@@ -10,10 +10,10 @@ const users = [
   { id: 6, name: "Tsola" },
 ];
 
-export const MainScreen = ({ isActionPaneOpen, setOpenActionPane }) => {
+export const MainScreen = ({ isActionPaneOpen, setOpenActionPane, config }) => {
   return (
     <div className="main-screen">
-      <UserGrid users={users} />
+      <UserGrid users={users} config={config} />
       <ActionPane {...{ isActionPaneOpen, setOpenActionPane }} />
     </div>
   );

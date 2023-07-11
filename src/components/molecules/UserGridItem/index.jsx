@@ -1,11 +1,15 @@
 import React from "react";
 import { Avatar, Icon } from "../../atoms";
 
-export const UserGridItem = ({ imgURL, name }) => {
+export const UserGridItem = ({ imgURL, name, config }) => {
   return (
     <div className="grid-item">
       <div className="audio-icon-wrapper">
-        <Icon name="audio-on" fill="#fff" />
+        {config.micActive ? (
+          <Icon name="audio-on" fill="#fff" />
+        ) : (
+          <Icon name="audio-off" fill="#fff" />
+        )}
       </div>
 
       <div className="user-avatar-wrapper">
