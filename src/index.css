@@ -93,6 +93,7 @@ div.action-icon:not(:last-child) {
 div.action-icon:last-child {
   width: 65px;
   border-radius: 30px;
+  background-color: red;
 }
 
 .meeting-actions {

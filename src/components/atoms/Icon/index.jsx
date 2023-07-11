@@ -37,7 +37,7 @@ export const Icon = (props) => {
       </svg>
     );
 
-  if (props.name === "video-off")
+  if (props.name === "video-on")
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
