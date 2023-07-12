@@ -14,7 +14,7 @@ export const MainScreen = ({ isActionPaneOpen, setOpenActionPane, config }) => {
   return (
     <div className="main-screen">
       <UserGrid users={users} config={config} />
-      <ActionPane {...{ isActionPaneOpen, setOpenActionPane }} />
+      <ActionPane {...{ isActionPaneOpen, setOpenActionPane, config }} />
     </div>
   );
 };

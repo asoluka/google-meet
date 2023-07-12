@@ -125,4 +125,31 @@ div.display-icon:hover {
   width: 500px;
   background-color: white;
   border-radius: 0.5rem;
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.action-pane button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.align-center {
+  align-items: center;
 }

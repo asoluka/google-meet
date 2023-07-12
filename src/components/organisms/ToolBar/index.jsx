@@ -9,8 +9,15 @@ export const ToolBar = ({
   config,
   setConfig,
 }) => {
-  function handleActionPaneState() {
-    setOpenActionPane((prev) => !prev);
+  function handleActionPaneState(type) {
+    setOpenActionPane(true);
+    setConfig((prev) => ({
+      ...prev,
+      activePane: {
+        ...prev.activePane,
+        type,
+      },
+    }));
   }
 
   return (
@@ -82,21 +89,29 @@ export const ToolBar = ({
 
       <div className="display-icons">
         <div className="display-icon">
-          <Icon onClick={handleActionPaneState} name="info" fill="white" />
+          <Icon
+            onClick={() => handleActionPaneState("meetingDetails")}
+            name="info"
+            fill="white"
+          />
         </div>
         <div className="display-icon">
           <Icon
-            onClick={handleActionPaneState}
+            onClick={() => handleActionPaneState("userGroup")}
             name="user-group"
             fill="white"
           />
         </div>
         <div className="display-icon">
-          <Icon onClick={handleActionPaneState} name="chat" fill="white" />
+          <Icon
+            onClick={() => handleActionPaneState("chat")}
+            name="chat"
+            fill="white"
+          />
         </div>
         <div className="display-icon">
           <Icon
-            onClick={handleActionPaneState}
+            onClick={() => handleActionPaneState("activityGroup")}
             name="activity-group"
             fill="white"
           />

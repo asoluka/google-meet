@@ -12,6 +12,9 @@ export const HomePage = () => {
     shareScreen: false,
     raiseHand: false,
     showMoreOptions: false,
+    activePane: {
+      type: "meetingDetails",
+    },
   });
 
   return (

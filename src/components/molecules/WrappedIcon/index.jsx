@@ -21,6 +21,7 @@ export const WrappedIcon = ({
           return { ...prev, [title]: !prev[title] };
         })
       }
+      title={title}
     >
       <Icon
         name={iconType}
